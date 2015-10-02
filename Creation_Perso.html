@@ -1,0 +1,328 @@
+﻿<html>
+	<header>
+		<Title>Création : Personnage</Title>
+		<link rel="stylesheet" type="text/css" href="Création_Perso.css">
+	</header>
+
+	<body>		
+		<h1>Création Personnage</h1>
+
+		<button onClick="Aleatoire_Bi_Atche()">Et OUAIS !</br>Mon gars !</br>Du random Aïze !</button>
+
+		<div class="Description">
+			Nom : <input id="Pseudo" />
+		</div>
+
+		<div class="Description">
+			Race : 	<select id="Race" onChange="SelectionRace()">
+						<option selected value=Null></option>
+						<option value="Humain"> Humain </option>
+						<option value="Elfe"> Elfe </option>
+						<option value="Haut Elfe"> Haut Elfe </option>
+						<option value="Elfe des bois"> Elfe des bois </option>
+						<option value="Elfe des cieux"> Elfe des cieux </option>
+						<option value="Hobbit"> Hobbit </option>
+					</select> 
+					<span id="Race_Bonus"></span> 
+		</div>
+
+		<div class="Description">
+			Classe : <select id="Classe" onChange="SelectionClasse()">
+						<option selected value=Null></option>
+						<option value="Guérier"> Guérier </option>
+						<option value="Mage"> Mage </option>
+						<option value="Archer"> Archer </option>
+						<option value="Voleur"> Voleur </option>
+						<option value="Assassin"> Assassin </option>
+					</select>
+		</div>
+
+		<div class="Description">
+			Point de Destin : <select id="PointDestin">
+								<option selected value=Null></option>
+								<option value="0"> 0 </option>
+								<option value="1"> 1 </option>
+								<option value="2"> 2 </option>
+								<option value="3"> 3 </option>
+							</select>
+		</div>
+
+		</br>
+
+		<div class="Caracteristique">
+			Caractéristique 1 : 
+			<select id="Carac_1_Valeur_De_1" onChange="CalculCarac(1)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_1_Valeur_De_2" onChange="CalculCarac(1)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_1_Valeur_De_3" onChange="CalculCarac(1)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_1_Valeur_De_4" onChange="CalculCarac(1)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select>
+			<img class="Validation" id="Validation_1" src="Refus.png"></img>
+			Total : <span id="Total_1">0</span>
+		</div>
+
+		<div class="Caracteristique">
+			Caractéristique 2 : 
+			<select id="Carac_2_Valeur_De_1" onChange="CalculCarac(2)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_2_Valeur_De_2" onChange="CalculCarac(2)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_2_Valeur_De_3" onChange="CalculCarac(2)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_2_Valeur_De_4" onChange="CalculCarac(2)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select>
+			<img class="Validation" id="Validation_2" src="Refus.png"></img>
+			Total : <span id="Total_2">0</span>
+		</div>
+
+		<div class="Caracteristique">
+			Caractéristique 3 : 
+			<select id="Carac_3_Valeur_De_1" onChange="CalculCarac(3)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_3_Valeur_De_2" onChange="CalculCarac(3)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_3_Valeur_De_3" onChange="CalculCarac(3)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_3_Valeur_De_4" onChange="CalculCarac(3)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select>
+			<img class="Validation" id="Validation_3" src="Refus.png"></img>
+			Total : <span id="Total_3">0</span>
+		</div>
+
+		<div class="Caracteristique">
+			Caractéristique 4 : 
+			<select id="Carac_4_Valeur_De_1" onChange="CalculCarac(4)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_4_Valeur_De_2" onChange="CalculCarac(4)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_4_Valeur_De_3" onChange="CalculCarac(4)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_4_Valeur_De_4" onChange="CalculCarac(4)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select>
+			<img class="Validation" id="Validation_4" src="Refus.png"></img>
+			Total : <span id="Total_4">0</span>
+		</div>
+
+		<div class="Caracteristique">
+			Caractéristique 5 : 
+			<select id="Carac_5_Valeur_De_1" onChange="CalculCarac(5)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_5_Valeur_De_2" onChange="CalculCarac(5)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_5_Valeur_De_3" onChange="CalculCarac(5)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_5_Valeur_De_4" onChange="CalculCarac(5)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select>
+			<img class="Validation" id="Validation_5" src="Refus.png"></img> 
+			Total : <span id="Total_5">0</span>
+		</div>
+
+		<div class="Caracteristique">
+			Caractéristique 6 : 
+			<select id="Carac_6_Valeur_De_1" onChange="CalculCarac(6)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_6_Valeur_De_2" onChange="CalculCarac(6)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_6_Valeur_De_3" onChange="CalculCarac(6)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select> 
+			<select id="Carac_6_Valeur_De_4" onChange="CalculCarac(6)">
+				<option selected value="0"></option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+			</select>
+			<img class="Validation" id="Validation_6" src="Refus.png"></img>
+			Total : <span id="Total_6">0</span>
+		</div>
+
+		<button onclick="ReinitialisationCarac()">Réinitialiser les</br>Caractéristique</button>
+		<button id="Deuxieme_Relance" onclick="NouveauLance()" style="Display:none;">Deuxième</br>Lancée</button>
+
+		<div id="Nouveau_Lance" style="Display:none">
+			<div class="Caracteristique">
+					Caractéristique 1 : <span id="Save_1"></span>
+			</div>
+			<div class="Caracteristique">
+					Caractéristique 1 : <span id="Save_2"></span>
+			</div>
+			<div class="Caracteristique">
+					Caractéristique 1 : <span id="Save_3"></span>
+			</div>
+			<div class="Caracteristique">
+					Caractéristique 1 : <span id="Save_4"></span>
+			</div>
+			<div class="Caracteristique">
+					Caractéristique 1 : <span id="Save_5"></span>
+			</div>
+			<div class="Caracteristique">
+					Caractéristique 1 : <span id="Save_6"></span>
+			</div>
+		</div>
+	</body>
+</html>	
